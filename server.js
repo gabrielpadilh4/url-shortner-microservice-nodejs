@@ -8,6 +8,7 @@ const validUrl = require('valid-url')
 const { ShortUrlModel } = require('./ShortUrlModel');
 
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 if (!process.env.DISABLE_XORIGIN) {
     app.use(function (req, res, next) {
