@@ -34,7 +34,7 @@ app.post("/api/shorturl", async function (req, res) {
     var shortUrl = ShortUrlModel({ originalUrl: urlRequest })
 
     shortUrl.save(function (err, data) {
-        return res.json({ originalUrl: data.originalUrl, shortUrl: data._id })
+        return res.json({ original_url: data.originalUrl, short_url: data._id })
     })
 });
 
